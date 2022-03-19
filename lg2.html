@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        * {
+            /*Set padding and margin for all elements*/
+            margin: 0;
+            padding: 0;
+            /*Set fixed size for all elements (from borders to inside of elements)*/
+            box-sizing: border-box;
+            /*Set font-family for all elements*/
+            font-family: sans-serif;
+        }
+        body {
+            /* To make all the elements center */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*Set min-height for body element*/
+            min-height: 100vh;
+            /*Set background color for body element*/
+            background: #131419;
+        }
+        .form {
+            /*Set width for login form*/
+            width: 350px;
+            /*Set padding for login form*/
+            padding: 40px 40px 60px;
+            /*Round corner of login form*/
+            border-radius: 10px;
+            /*Set background for login form*/
+            background: #131419;
+            /*Make elements in form center*/
+            text-align: center;
+            /*Create 3D effect for login form*/
+            box-shadow: -5px -5px 10px rgba(225, 225, 225, 0.05),
+            5px 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        .form h2 {
+            /*Set color for "login" text in login form*/
+            color: #fdfdfd;
+            /*Set thick of font for "login" text in login form*/
+            font-weight: 700;
+            /*Set all letter in "login" text to uppercase ("TEXT")*/
+            text-transform: uppercase;
+            /*Set space between letter*/
+            letter-spacing: 4px;
+        }
+        .form .input {
+            /*Set margin from top for inputs*/
+            margin-top: 40px;
+            /*Make all inputs center*/
+            text-align: left;
+        }
+        .form .input .inputBox {
+            /*Set margin from top for invidual input box*/
+            margin-top: 20px;
+        }
+        .form .input .inputBox label {
+            /*Set label elemnts to block (label elements will locate on the line invidually)*/
+            display: block;
+            /*Set color for label elements*/
+            color: #868686;
+            /*Set margin from bottom for label elements*/
+            margin-bottom: 5px;
+            /*Set font size for label elements*/
+            font-size: 18px;
+        }
+        .form .input .inputBox input {
+            /*Set width for all input elements*/
+            width: 100%;
+            /*Set height for all input elements*/
+            height: 50px;
+            /*Set color for all input elements*/
+            color: #03a9f4;
+            /*Set background color for all input elements*/
+            background: #131419;
+            /* To hide default browser options (border and outline) of input*/
+            border: none;
+            outline: none;
+            /*Round corner for all input elements*/
+            border-radius: 40px;
+            /*Set padding for content in all input elements*/
+            padding: 5px 15px;
+            /*Set shadow for all input elements to create 3D effects*/
+            box-shadow: inset -2px -2px 6px rgba(225, 225, 225, 0.1),
+            inset 2px 2px 6px rgba(0, 0, 0, 0.8);
+        }
+        .form .input .inputBox input[type="submit"] {
+            /*Set margin from top for input element that have type="submit"*/
+            margin-top: 20px;
+            /*Set font size for text on button*/
+            font-size: 18px;
+            /*Set shadow for button to create 3D effect*/
+            box-shadow: -2px -2px 6px rgba(225, 225, 225, 0.1),
+            2px 2px 6px rgba(0, 0, 0, 0.8);
+        }
+        /*Create 3D effect when click on button*/
+        .form .input .inputBox input[type="submit"]:active {
+            /*Set color for text on input element that have type="submit" when we click on it*/
+            color: #006c9c;
+            /*Set margin from top for input element that have type="submit" when we click on it*/
+            margin-top: 20px;
+            /*Set shadow for input element that have type="submit" when we click on it, create
+            3D effect on button when we click on it*/
+            box-shadow: inset -2px -2px 6px rgba(225, 225, 225, 0.1),
+            inset 2px 2px 6px rgba(0, 0, 0, 0.8);
+        }
+        .form .input .inputBox input::placeholder {
+            /*Set color for placeholders of input elements*/
+            color: #555;
+            /*Set font size for placeholders of input elements*/
+            font-size: 18px;
+        }
+        .forget {
+            /*Set margin from top for "Forget Password" line (at bottom of login form)*/
+            margin-top: 30px;
+            /*Set color for text in "Forget Password" line*/
+            color: #555;
+        }
+        .forget a {
+            /*Set color for <a> element*/
+            color: #ff0047;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <h2>Login</h2>
+        <div class="input">
+            <div class="inputBox">
+                <label for="">Username</label>
+                <input type="text" placeholder="example@xyz.com" required>
+            </div>
+            <div class="inputBox">
+                <label for="">Password</label>
+                <input type="password" placeholder="Password" required>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Signin">
+            </div>
+        </div>
+        <p class="forget">Forgot Password?<a href="#">Click Here</a></p>
+    </div>
+</body>
+</html>
